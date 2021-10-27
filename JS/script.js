@@ -1,18 +1,21 @@
 
 "use strict";
 
+
+
 let arrayNumeri = [];
 let arrayNumeriUtente = [];
 let arrayNumeriIndovinati = [];
+
 let numero;
 
 for (let i = 0; i < 5; i++) {
     numero = randomNumber();
     arrayNumeri.push(numero);
 }
-console.log("i numeri generati da indovinare sono: " + arrayNumeri);
+console.log("i numeri generati da indovinare sono: " + arrayNumeri.join("  "));
 
-alert("ricorda questi numeri:   " + arrayNumeri);
+alert("ricorda questi numeri:   " + arrayNumeri.join("  "));
 
 setTimeout(programForPromptControlAndResult, 300);
 
@@ -44,7 +47,7 @@ function programForPromptControlAndResult() {
     arrayNumeriUtente.push(numeriUtente3);
     arrayNumeriUtente.push(numeriUtente4);
     arrayNumeriUtente.push(numeriUtente5);
-    console.log("l'utente ha inserito: " + arrayNumeriUtente);
+    console.log("l'utente ha inserito: " + arrayNumeriUtente.join(" "));
     ////////////////
 
 
@@ -63,7 +66,7 @@ function programForPromptControlAndResult() {
 
     //messaggio alert per visualizzare il risultato
     if (arrayNumeriIndovinati != "") {
-        alert(` complimenti hai indovinato ${arrayNumeriIndovinati.length} numeri: ${arrayNumeriIndovinati}`);
+        alert(` complimenti hai indovinato ${arrayNumeriIndovinati.length} numeri: ${arrayNumeriIndovinati.join(" ")}`);
     } else {
         alert(` Mi dispiace... non hai indovinato nessun numero`);
 
