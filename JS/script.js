@@ -1,9 +1,5 @@
 
-
 "use strict";
-
-
-
 
 let arrayNumeri = [];
 let arrayNumeriUtente = [];
@@ -18,7 +14,7 @@ console.log("i numeri generati da indovinare sono: " + arrayNumeri);
 
 alert("ricorda questi numeri:   " + arrayNumeri);
 
-setTimeout(promptPush, 300);
+setTimeout(programForPromptControlAndResult, 300);
 
 
 
@@ -36,7 +32,7 @@ function randomNumber() {
     return Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 }
 
-function promptPush() {
+function programForPromptControlAndResult() {
     let arrayNumeriUtente = [];
     let numeriUtente1 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
     if ((numeriUtente1 === "") || (isNaN(numeriUtente1))) {
@@ -69,7 +65,7 @@ function promptPush() {
     console.log(arrayNumeriIndovinati);
 
     if (arrayNumeriIndovinati != undefined) {
-        alert("complimenti hai indovinato i seguenti numeri: " + arrayNumeriIndovinati);
+        alert(` complimenti hai indovinato ${arrayNumeriIndovinati.length} numeri: ${arrayNumeriIndovinati}`);
     }
 
 }
