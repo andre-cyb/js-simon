@@ -64,8 +64,11 @@ function programForPromptControlAndResult() {
     }
     console.log(arrayNumeriIndovinati);
 
-    if (arrayNumeriIndovinati != undefined) {
+    if (arrayNumeriIndovinati != "") {
         alert(` complimenti hai indovinato ${arrayNumeriIndovinati.length} numeri: ${arrayNumeriIndovinati}`);
+    } else {
+        alert(` Mi dispiace... non hai indovinato nessun numero`);
+
     }
 
 }
