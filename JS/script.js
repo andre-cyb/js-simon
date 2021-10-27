@@ -16,17 +16,10 @@ for (let i = 0; i < 5; i++) {
 }
 console.log("i numeri generati da indovinare sono: " + arrayNumeri);
 
-
 alert("ricorda questi numeri:   " + arrayNumeri);
-
 
 setTimeout(promptPush, 300);
 
-
-
-
-
-console.log(arrayNumeriIndovinati);
 
 
 
@@ -72,6 +65,11 @@ function promptPush() {
         } else if (arrayNumeriIndovinati === undefined) {
             alert("Mi dispiace non hai indovinato nessun numero");
         }
+    }
+    console.log(arrayNumeriIndovinati);
+
+    if (arrayNumeriIndovinati != undefined) {
+        alert("complimenti hai indovinato i seguenti numeri: " + arrayNumeriIndovinati);
     }
 
 }
