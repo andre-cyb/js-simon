@@ -19,13 +19,6 @@ setTimeout(programForPromptControlAndResult, 300);
 
 
 
-
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////////7
 //FUNZIONI
 function randomNumber() {
@@ -34,6 +27,8 @@ function randomNumber() {
 
 function programForPromptControlAndResult() {
     let arrayNumeriUtente = [];
+
+    //PROMPT numeri utente e push nell'array vuoto di numeriUtente/////////
     let numeriUtente1 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
     if ((numeriUtente1 === "") || (isNaN(numeriUtente1))) {
         alert("NOTA: puoi inserire solo numeri ");
@@ -43,13 +38,17 @@ function programForPromptControlAndResult() {
     let numeriUtente3 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
     let numeriUtente4 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
     let numeriUtente5 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
+    //push nell'array
     arrayNumeriUtente.push(numeriUtente1);
     arrayNumeriUtente.push(numeriUtente2);
     arrayNumeriUtente.push(numeriUtente3);
     arrayNumeriUtente.push(numeriUtente4);
     arrayNumeriUtente.push(numeriUtente5);
     console.log("l'utente ha inserito: " + arrayNumeriUtente);
+    ////////////////
 
+
+    //CONTROLLO ciclando i numeri utente e vedo se esistono già nell'arrayNumeri, se esistono allora li pusho in arrayIndovinati
     for (let i = 0; i < arrayNumeriUtente.length; i++) {
         let numeroUtente = arrayNumeriUtente[i];
         //console.log(numeroUtente);
@@ -64,6 +63,7 @@ function programForPromptControlAndResult() {
     }
     console.log(arrayNumeriIndovinati);
 
+    //messaggio alert per visualizzare il risultato
     if (arrayNumeriIndovinati != "") {
         alert(` complimenti hai indovinato ${arrayNumeriIndovinati.length} numeri: ${arrayNumeriIndovinati}`);
     } else {
