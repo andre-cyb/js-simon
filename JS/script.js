@@ -29,9 +29,9 @@ function programForPromptControlAndResult() {
     let arrayNumeriUtente = [];
 
     //PROMPT numeri utente e push nell'array vuoto di numeriUtente/////////
-    let numeriUtente1 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
+    let numeriUtente1 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili UNO alla volta qua sotto. "));
     if ((numeriUtente1 === "") || (isNaN(numeriUtente1))) {
-        alert("NOTA: puoi inserire solo numeri ");
+        alert("ATTENZIONE: devi inserire numeri. ");
         return;
     }
     let numeriUtente2 = parseInt(prompt("Riesci a ricordare i numeri? prova e inseriscili qua sotto. "));
@@ -57,8 +57,6 @@ function programForPromptControlAndResult() {
         if (arrayNumeri.includes(numeroUtente)) {
             numeroEsiste = true;
             arrayNumeriIndovinati.push(numeroUtente);
-        } else if (arrayNumeriIndovinati === undefined) {
-            alert("Mi dispiace non hai indovinato nessun numero");
         }
     }
     console.log(arrayNumeriIndovinati);
